@@ -171,7 +171,12 @@
           "omnivoros",
           "sin_gluten"
         ],
-        "disponibilidad": true
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": false,
+          "nombre_recomendado": "ENT-SAS-PBL-01.webp",
+          "alt_text": "Pescado blanco - Plato típico de Makilovers"
+        }
       }
     ],
     "bebidas": [
@@ -198,7 +203,12 @@
         "apto_para": [
           "todos"
         ],
-        "disponibilidad": true
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": true,
+          "nombre_recomendado": "BEB-REF-INC-01.webp",
+          "alt_text": "Inca Kola - Plato típico de Makilovers"
+        }
       },
       {
         "sku": "BEB-TEA-VER-01",
@@ -224,7 +234,12 @@
           "todos",
           "sin_gluten"
         ],
-        "disponibilidad": true
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": true,
+          "nombre_recomendado": "BEB-TEA-VER-01.webp",
+          "alt_text": "Té Verde - Plato típico de Makilovers"
+        }
       }
     ],
     "entradas_alitas": [
@@ -253,7 +268,12 @@
         "apto_para": [
           "omnivoros"
         ],
-        "disponibilidad": true
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": true,
+          "nombre_recomendado": "ENT-ALI-BBQ-01.webp",
+          "alt_text": "Alitas BBQ - Plato típico de Makilovers"
+        }
       },
       {
         "sku": "ENT-ALI-TER-01",
@@ -281,7 +301,12 @@
         "apto_para": [
           "omnivoros"
         ],
-        "disponibilidad": true
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": true,
+          "nombre_recomendado": "ENT-ALI-TER-01.webp",
+          "alt_text": "Alitas Teriyaki - Plato típico de Makilovers"
+        }
       }
     ],
     "sopas_ramen": [
@@ -323,7 +348,7 @@
         ],
         "disponibilidad": true,
         "imagen": {
-          "existe_en_disco": false,
+          "existe_en_disco": true,
           "nombre_recomendado": "SOP-RAM-CAS-01_M.webp"
         }
       },
@@ -365,7 +390,12 @@
         "apto_para": [
           "omnivoros"
         ],
-        "disponibilidad": true
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": true,
+          "nombre_recomendado": "SOP-RAM-ESP-01.webp",
+          "alt_text": "Ramen Especial - Plato típico de Makilovers"
+        }
       },
       {
         "sku": "SOP-RAM-TAN-01",
@@ -404,7 +434,12 @@
         "apto_para": [
           "omnivoros"
         ],
-        "disponibilidad": true
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": true,
+          "nombre_recomendado": "SOP-RAM-TAN-01.webp",
+          "alt_text": "Tantanmen Ramen - Plato típico de Makilovers"
+        }
       }
     ],
     "makis_frios": [
@@ -435,7 +470,12 @@
         "apto_para": [
           "omnivoros"
         ],
-        "disponibilidad": true
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": true,
+          "nombre_recomendado": "MAK-FRI-ACE-01.webp",
+          "alt_text": "Acevichado - Plato típico de Makilovers"
+        }
       },
       {
         "sku": "MAK-FRI-PHI-01",
@@ -464,7 +504,12 @@
         "apto_para": [
           "omnivoros"
         ],
-        "disponibilidad": true
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": true,
+          "nombre_recomendado": "MAK-FRI-PHI-01.webp",
+          "alt_text": "Philadelphia Roll - Plato típico de Makilovers"
+        }
       },
       {
         "sku": "MAK-FRI-CAL-01",
@@ -492,7 +537,12 @@
         "apto_para": [
           "omnivoros"
         ],
-        "disponibilidad": true
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": true,
+          "nombre_recomendado": "MAK-FRI-CAL-01.webp",
+          "alt_text": "California Roll - Plato típico de Makilovers"
+        }
       },
       {
         "sku": "MAK-FRI-SPT-01",
@@ -520,7 +570,12 @@
           "omnivoros",
           "sin_gluten"
         ],
-        "disponibilidad": true
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": true,
+          "nombre_recomendado": "MAK-FRI-SPT-01.webp",
+          "alt_text": "Spicy Tuna Roll - Plato típico de Makilovers"
+        }
       }
     ]
   },

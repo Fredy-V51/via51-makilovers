@@ -39,11 +39,71 @@ class MenuApp {
                 return;
             }
         } catch (e) {
-            console.warn('API no disponible, usando datos locales...');
+            console.warn('API no disponible, usando datos del JSON completo...');
         }
 
-        // Fallback: datos locales hardcodeados
-        this.cargarDatosLocales();
+        // Fallback: cargar desde menu_makilovers_completo.json
+        await this.cargarDesdeJSONCompleto();
+    }
+
+    async cargarDesdeJSONCompleto() {
+        try {
+            const response = await fetch('/menu_makilovers_completo.json');
+            const data = await response.json();
+            
+            this.productos = [];
+            
+            // Procesar productos por categoría
+            for (const [categoriaKey, productos] of Object.entries(data.productos)) {
+                for (const producto of productos) {
+                    // Convertir al formato del frontend
+                    const productoFormateado = {
+                        sku: producto.sku,
+                        nombre: producto.nombre,
+                        categoria_display: this.getNombreCategoria(categoriaKey),
+                        categoria_filtro: categoriaKey.split('_')[0], // entradas, makis, sopas, bebidas
+                        subcategoria: producto.subcategoria,
+                        descripcion: producto.descripcion_corta || producto.nombre,
+                        presentacion: producto.presentacion,
+                        precio: producto.precio?.venta || producto.precios_multiples?.mediano?.venta,
+                        precio_mediano: producto.precios_multiples?.mediano?.venta,
+                        precio_grande: producto.precios_multiples?.grande?.venta,
+                        moneda: producto.precio?.moneda || 'PEN',
+                        alergenos: producto.alergenos || [],
+                        imagen: producto.imagen,
+                        disponible: producto.disponibilidad !== false
+                    };
+                    
+                    this.productos.push(productoFormateado);
+                }
+            }
+            
+            console.log(`✅ Cargados ${this.productos.length} productos desde JSON`);
+        } catch (error) {
+            console.error('❌ Error cargando JSON completo:', error);
+            // Último fallback: datos hardcodeados
+            this.cargarDatosLocales();
+        }
+    }
+
+    getCategoriaDir(categoriaFiltro) {
+        const dirs = {
+            'entradas': 'entradas_sashimi', // Usamos sashimi como principal para entradas
+            'makis': 'makis_frios',
+            'sopas': 'sopas_ramen',
+            'bebidas': 'bebidas'
+        };
+        return dirs[categoriaFiltro] || categoriaFiltro;
+    }
+
+    getEmojiCategoria(categoriaFiltro) {
+        const emojis = {
+            'entradas': '🥢',
+            'makis': '🍣',
+            'sopas': '🍜',
+            'bebidas': '🥤'
+        };
+        return emojis[categoriaFiltro] || '🍱';
     }
 
     async procesarDesdeCategorias(categorias) {
@@ -300,7 +360,25 @@ class MenuApp {
         // Imagen
         const imagenDiv = document.createElement('div');
         imagenDiv.className = 'producto-imagen';
-        imagenDiv.textContent = producto.emoji || '🍱';
+        
+        if (producto.imagen && producto.imagen.existe_en_disco) {
+            // Mostrar imagen real
+            const img = document.createElement('img');
+            img.src = `/assets/images/productos/${this.getCategoriaDir(producto.categoria_filtro)}/${producto.imagen.nombre_recomendado}`;
+            img.alt = producto.imagen.alt_text || producto.nombre;
+            img.loading = 'lazy';
+            img.onerror = () => {
+                // Fallback a emoji si la imagen falla
+                imagenDiv.textContent = this.getEmojiCategoria(producto.categoria_filtro);
+                imagenDiv.style.fontSize = '4rem';
+            };
+            imagenDiv.appendChild(img);
+        } else {
+            // Fallback a emoji
+            imagenDiv.textContent = this.getEmojiCategoria(producto.categoria_filtro);
+            imagenDiv.style.fontSize = '4rem';
+        }
+        
         card.appendChild(imagenDiv);
 
         // Contenido

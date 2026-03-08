@@ -37,10 +37,10 @@ def download_image(url, filepath):
         return False
 
 def get_unsplash_image(search_term):
-    """Obtiene URL de imagen desde Unsplash"""
-    # Usando la API de Unsplash (gratuita, sin key para búsquedas básicas)
-    url = f"https://source.unsplash.com/featured/?{search_term.replace(' ', ',')}"
-    return url
+    """Obtiene URL de imagen desde Lorem Picsum (gratuito, sin API key)"""
+    # Usando Lorem Picsum para imágenes aleatorias 600x600 webp
+    # https://picsum.photos/600/600.webp
+    return f"https://picsum.photos/600/600.webp?random={hash(search_term) % 1000}"
 
 def main():
     base_dir = Path('public/assets/images/productos')

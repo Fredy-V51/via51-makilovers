@@ -36,6 +36,11 @@ app.get('/plato/:codigo', async (req, res) => {
     }
 });
 
+// Servir el JSON completo para el frontend
+app.get('/menu_makilovers_completo.json', (req, res) => {
+    res.sendFile(path.join(__dirname, 'menu_makilovers_completo.json'));
+});
+
 const port = process.env.PORT || 3000;
 
 if (require.main === module) {
