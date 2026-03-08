@@ -1,0 +1,101 @@
+{
+  "sopas": {
+    "categoria": "SOPAS",
+    "nombreCategoria": "Sopas y Caldos Nikkei",
+    "icono": "🍜",
+    "platos": [
+      {
+        "codigo": "SO-RAM-C",
+        "nombre": "Ramen de la Casa",
+        "descripcion": "Caldo umami con fideos artesanales y toppings frescos",
+        "precio": { "corto": 25.00, "amplio": 35.00 },
+        "perfil": { "tipo": "umami", "picante": false },
+        "alergenosPrincipales": ["gluten"],
+        "disponibilidad": true
+      },
+      {
+        "codigo": "SO-MISO-C",
+        "nombre": "Ramen Miso",
+        "descripcion": "Caldo miso fermentado con verduras y proteína",
+        "precio": { "corto": 22.00, "amplio": 30.00 },
+        "perfil": { "tipo": "salado", "picante": false },
+        "alergenosPrincipales": ["soya"],
+        "disponibilidad": true
+      }
+    ]
+  },
+  "makis": {
+    "categoria": "MAKIS",
+    "nombreCategoria": "Rollos Especiales",
+    "icono": "🍣",
+    "platos": [
+      {
+        "codigo": "MK-PHILADELPHIA-8",
+        "nombre": "Maki Philadelphia",
+        "descripcion": "Salmón fresco, queso crema, pepino - 8 piezas",
+        "precio": { "corto": 18.50, "amplio": 32.00 },
+        "perfil": { "tipo": "fresco", "picante": false },
+        "alergenosPrincipales": ["pescado", "lácteos"],
+        "disponibilidad": true
+      }
+    ]
+  },
+  "sashimi": {
+    "categoria": "SASHIMI",
+    "nombreCategoria": "Pescado Fresco",
+    "icono": "🐟",
+    "platos": [
+      {
+        "codigo": "SA-SALMON-6",
+        "nombre": "Sashimi de Salmón",
+        "descripcion": "6 piezas de salmón del Atlántico premium",
+        "precio": { "individual": 38.00, "familiar": 68.00 },
+        "perfil": { "tipo": "umami", "picante": false },
+        "alergenosPrincipales": ["pescado"],
+        "disponibilidad": true
+      }
+    ]
+  },
+  "entradas": {
+    "categoria": "ENTRADAS",
+    "nombreCategoria": "Aperitivos",
+    "icono": "🥢",
+    "platos": []
+  },
+  "ceviches": {
+    "categoria": "CEVICHES",
+    "nombreCategoria": "Ceviches Nikkei",
+    "icono": "🍋",
+    "platos": []
+  },
+  "arroces": {
+    "categoria": "ARROCES",
+    "nombreCategoria": "Arroces Calientes",
+    "icono": "🍚",
+    "platos": []
+  },
+  "tiraditos": {
+    "categoria": "TIRADITOS",
+    "nombreCategoria": "Pescado Marinado",
+    "icono": "🔪",
+    "platos": []
+  },
+  "nigiri": {
+    "categoria": "NIGIRI",
+    "nombreCategoria": "Nigiri Sushi",
+    "icono": "🍣",
+    "platos": []
+  },
+  "bebidas": {
+    "categoria": "BEBIDAS",
+    "nombreCategoria": "Bebidas y Refrescos",
+    "icono": "🥤",
+    "platos": []
+  },
+  "postres": {
+    "categoria": "POSTRES",
+    "nombreCategoria": "Fin de Comida",
+    "icono": "🍮",
+    "platos": []
+  }
+}
