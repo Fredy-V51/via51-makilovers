@@ -1,0 +1,23 @@
+# Node modules and dependencies
+node_modules/
+
+# Coverage reports
+coverage/
+
+# Firebase local files
+.firebase/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# IDEs and editors
+.vscode/

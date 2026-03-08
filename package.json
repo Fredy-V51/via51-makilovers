@@ -1,0 +1,16 @@
+{
+  "name": "makilovers",
+  "version": "1.0.0",
+  "description": "Carta digital para Makilovers - despliegue serverless en Firebase Hosting",
+  "scripts": {
+    "deploy": "firebase deploy --only hosting",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "supertest": "^6.3.3"
+  }
+}

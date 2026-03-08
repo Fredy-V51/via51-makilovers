@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+// opcional Firestore
+let admin;
+
 /**
  * Servicio de menú para Makilovers
  * Arquitectura escalable para gestión de catálogo dinámico
@@ -9,14 +12,32 @@ class MenuService {
     constructor() {
         this.menuPath = path.join(__dirname, 'menu.json');
         this.menuData = null;
+
+        // Si se activa la lectura desde Firestore mediante variable de entorno
+        this.useFirestore = process.env.USE_FIRESTORE === 'true';
+        if (this.useFirestore) {
+            admin = admin || require('firebase-admin');
+            if (!admin.apps.length) {
+                admin.initializeApp({
+                    credential: admin.credential.applicationDefault()
+                });
+            }
+            this.db = admin.firestore();
+        }
     }
 
     /**
-     * Carga el menú desde el archivo JSON
-     * @returns {Object} Datos del menú completo
-     * @throws {Error} Si hay problemas de lectura o parsing
+     * Carga el menú desde la fuente configurada
+     * (archivo JSON o Firestore en modo asíncrono)
      */
-    cargarMenu() {
+    async cargarMenu() {
+        if (this.useFirestore) {
+            return this._cargarMenuFirestore();
+        }
+        return this._cargarMenuFile();
+    }
+
+    _cargarMenuFile() {
         try {
             if (!this.menuData) {
                 const data = fs.readFileSync(this.menuPath, 'utf8');
@@ -34,19 +55,34 @@ class MenuService {
         }
     }
 
+    async _cargarMenuFirestore() {
+        if (this.menuData) return this.menuData;
+        try {
+            const snapshot = await this.db.collection('menu').get();
+            const data = {};
+            snapshot.forEach(doc => {
+                data[doc.id] = doc.data();
+            });
+            this.menuData = data;
+            return data;
+        } catch (error) {
+            throw new Error(`Error al leer menú desde Firestore: ${error.message}`);
+        }
+    }
+
     /**
      * Obtiene los platos de una categoría específica
      * @param {string} categoria - Nombre de la categoría (ej: 'sopas', 'makis')
      * @returns {Array} Array de platos de la categoría
      * @throws {Error} Si la categoría no existe o hay datos inválidos
      */
-    obtenerMenu(categoria) {
+    async obtenerMenu(categoria) {
         if (typeof categoria !== 'string' || !categoria.trim()) {
             throw new Error('La categoría debe ser una cadena no vacía');
         }
 
         const categoriaLower = categoria.toLowerCase();
-        const menu = this.cargarMenu();
+        const menu = await this.cargarMenu();
 
         if (!menu[categoriaLower]) {
             throw new Error(`Categoría '${categoria}' no encontrada en el menú`);
@@ -87,8 +123,8 @@ class MenuService {
      * Lista todas las categorías disponibles
      * @returns {Array} Array de nombres de categorías
      */
-    obtenerCategorias() {
-        const menu = this.cargarMenu();
+    async obtenerCategorias() {
+        const menu = await this.cargarMenu();
         return Object.keys(menu);
     }
 
@@ -97,8 +133,8 @@ class MenuService {
      * @param {string} codigo - Código del plato
      * @returns {Object|null} Plato encontrado o null
      */
-    buscarPlatoPorCodigo(codigo) {
-        const menu = this.cargarMenu();
+    async buscarPlatoPorCodigo(codigo) {
+        const menu = await this.cargarMenu();
 
         for (const categoria of Object.values(menu)) {
             const plato = categoria.platos.find(p => p.codigo === codigo);
@@ -117,7 +153,7 @@ class MenuService {
 // Instancia singleton del servicio
 const menuService = new MenuService();
 
-// Exportar la función principal como se solicitó
+// Exportar funciones asincrónicas
 module.exports = {
     obtenerMenu: (categoria) => menuService.obtenerMenu(categoria),
     obtenerCategorias: () => menuService.obtenerCategorias(),
