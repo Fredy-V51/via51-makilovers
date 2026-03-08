@@ -1,4 +1,4 @@
-/**
+npm install/**
  * Script: Cargar Menú a Firestore
  * 
  * Transforma menu_makilovers_completo.json → Colecciones Firestore
