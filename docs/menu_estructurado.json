@@ -1,0 +1,404 @@
+{
+  "generado": "2026-03-08T13:07:26.469095",
+  "version": "1.0",
+  "total_productos": 66,
+  "productos_simples": [
+    {
+      "nombre": "6 cortes de pescado y 4 de maricos",
+      "precio_simple": 26.0,
+      "descripcion": "Sashimi mixto*",
+      "linea": 24
+    },
+    {
+      "nombre": "Spicy kani",
+      "precio_simple": 20.0,
+      "descripcion": "Philadelphia",
+      "linea": 35
+    },
+    {
+      "nombre": "Parrillero",
+      "precio_simple": 20.0,
+      "descripcion": "Pescado blanco",
+      "linea": 46
+    },
+    {
+      "nombre": "Langostino",
+      "precio_simple": 20.0,
+      "descripcion": "Conchas de abanico",
+      "linea": 57
+    },
+    {
+      "nombre": "Alitas con el toque fresco y cítrico del ceviche",
+      "precio_simple": 20.0,
+      "descripcion": "Alitas Acevichadas*",
+      "linea": 66
+    },
+    {
+      "nombre": "de mariscos (150 gr.)",
+      "precio_simple": 27.0,
+      "descripcion": "**Finos trozos de pescado frito cubiertos con salsa mixta",
+      "linea": 92
+    },
+    {
+      "nombre": "alma, vegetales frescos y cerdo suave.M:",
+      "precio_simple": 24.0,
+      "descripcion": "Un clásico que nunca falla: caldo intenso, ideos ramen que abrazan el",
+      "linea": 116
+    },
+    {
+      "nombre": "langostino y más. Puro sabor en cada cucharada.M:",
+      "precio_simple": 26.0,
+      "descripcion": "¿Quieres algo más? Este ramen viene cargado de champiñones, cerdo,",
+      "linea": 119
+    },
+    {
+      "nombre": "que te harán cerrar los ojos con cada bocado.M:",
+      "precio_simple": 27.0,
+      "descripcion": "El secreto está en la salsa de la casa. Fideos, champiñones y cerdo cocido",
+      "linea": 123
+    },
+    {
+      "nombre": "decepciona.M:",
+      "precio_simple": 15.0,
+      "descripcion": "Tradicional, simple y deliciosa. Miso, nori y tofu: el combo que nunca",
+      "linea": 126
+    },
+    {
+      "nombre": "que te llenarán de energía.M:",
+      "precio_simple": 15.0,
+      "descripcion": "Un caldo lleno de vida con huevo de codorniz, vegetales y ideos soba",
+      "linea": 129
+    },
+    {
+      "nombre": "de dejar de disfrutar.M:",
+      "precio_simple": 24.0,
+      "descripcion": "Caldo suave de pollo con ideos ramen y cerdo. Sencillo, pero imposible",
+      "linea": 143
+    },
+    {
+      "nombre": "M:",
+      "precio_simple": 28.0,
+      "descripcion": "",
+      "linea": 144
+    },
+    {
+      "nombre": "M:",
+      "precio_simple": 28.0,
+      "descripcion": "",
+      "linea": 145
+    },
+    {
+      "nombre": "M:",
+      "precio_simple": 28.0,
+      "descripcion": "",
+      "linea": 146
+    },
+    {
+      "nombre": "M:",
+      "precio_simple": 25.0,
+      "descripcion": "",
+      "linea": 147
+    },
+    {
+      "nombre": "cada bocado es una explosión de sabor.",
+      "precio_simple": 20.0,
+      "descripcion": "Un especial de pollo, langostino y verduras al wok, donde",
+      "linea": 169
+    },
+    {
+      "nombre": "mejor de Japón en cada bocado. ¡No te resistas!",
+      "precio_simple": 25.0,
+      "descripcion": "Fideos salteados con verduras y pollo que combinan lo",
+      "linea": 192
+    },
+    {
+      "nombre": "WhatsApp +51 902 442 383",
+      "precio_simple": 20.0,
+      "descripcion": "Av. Micaela Bastidas 822",
+      "linea": 204
+    },
+    {
+      "nombre": "de arroz. ¡Textura y sabor en un solo rollo!",
+      "precio_simple": 20.0,
+      "descripcion": "Salmón al batayaki con queso crema, coronado con ideos",
+      "linea": 345
+    },
+    {
+      "nombre": "Tabla 5 und.:",
+      "precio_simple": 18.0,
+      "descripcion": "tropical irresistible!",
+      "linea": 357
+    },
+    {
+      "nombre": "Tabla 5 und.:",
+      "precio_simple": 18.0,
+      "descripcion": "durazno y salsa de maracuyá. ¡Dulce, cremoso y refrescante!",
+      "linea": 361
+    },
+    {
+      "nombre": "Tabla 6 und.:",
+      "precio_simple": 26.0,
+      "descripcion": "fresa. ¡La fusión perfecta entre lo crocante y lo cremoso!",
+      "linea": 365
+    },
+    {
+      "nombre": "Tabla 5 und.:",
+      "precio_simple": 26.0,
+      "descripcion": "broche de oro!",
+      "linea": 370
+    },
+    {
+      "nombre": "Amae Citrus",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 371
+    },
+    {
+      "nombre": "Aka Fruit",
+      "precio_simple": 20.0,
+      "descripcion": "Cítrico y refrescante, un golpe de energía en cada sorbo!",
+      "linea": 374
+    },
+    {
+      "nombre": "Midori Herbal",
+      "precio_simple": 20.0,
+      "descripcion": "que te hará suspirar.",
+      "linea": 377
+    },
+    {
+      "nombre": "Ringo",
+      "precio_simple": 20.0,
+      "descripcion": "Un cóctel fresco y tropical, perfecto para relajarse.",
+      "linea": 380
+    },
+    {
+      "nombre": "Jin Jang",
+      "precio_simple": 20.0,
+      "descripcion": "Una mezcla de culturas y sabores que explotan en tu boca.",
+      "linea": 383
+    },
+    {
+      "nombre": "La Colorada",
+      "precio_simple": 20.0,
+      "descripcion": "de contrastes, como su nombre lo indica.",
+      "linea": 386
+    },
+    {
+      "nombre": "Pisco Sour",
+      "precio_simple": 20.0,
+      "descripcion": "12:30 a 10:30 p.m.COCKTAIL LOVERS",
+      "linea": 394
+    },
+    {
+      "nombre": "Chilcano de Pisco",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 395
+    },
+    {
+      "nombre": "Gin & Tonic",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 396
+    },
+    {
+      "nombre": "Whisky Sour",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 397
+    },
+    {
+      "nombre": "Moscow Mule",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 398
+    },
+    {
+      "nombre": "Cuba Libre",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 399
+    },
+    {
+      "nombre": "Mojito",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 400
+    },
+    {
+      "nombre": "Caipiroska",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 401
+    },
+    {
+      "nombre": "Capitán",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 402
+    },
+    {
+      "nombre": "Negroni",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 403
+    },
+    {
+      "nombre": "Algarrobina",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 404
+    },
+    {
+      "nombre": "Piña Colada",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 405
+    },
+    {
+      "nombre": "Machu Picchu",
+      "precio_simple": 20.0,
+      "descripcion": "",
+      "linea": 406
+    },
+    {
+      "nombre": "Cusqueña",
+      "precio_simple": 13.0,
+      "descripcion": "",
+      "linea": 407
+    },
+    {
+      "nombre": "Corona",
+      "precio_simple": 15.0,
+      "descripcion": "",
+      "linea": 408
+    },
+    {
+      "nombre": "Heineken",
+      "precio_simple": 13.0,
+      "descripcion": "",
+      "linea": 409
+    },
+    {
+      "nombre": "Asahi (Japón)",
+      "precio_simple": 16.0,
+      "descripcion": "",
+      "linea": 410
+    },
+    {
+      "nombre": "Agua",
+      "precio_simple": 6.0,
+      "descripcion": "",
+      "linea": 411
+    },
+    {
+      "nombre": "Gaseosas",
+      "precio_simple": 8.0,
+      "descripcion": "",
+      "linea": 412
+    },
+    {
+      "nombre": "Té Verde",
+      "precio_simple": 10.0,
+      "descripcion": "*Sin gas / Con gasBEBIDAS Personal",
+      "linea": 414
+    },
+    {
+      "nombre": "Té Rojo",
+      "precio_simple": 10.0,
+      "descripcion": "",
+      "linea": 415
+    },
+    {
+      "nombre": "Té Jazmín",
+      "precio_simple": 10.0,
+      "descripcion": "",
+      "linea": 416
+    },
+    {
+      "nombre": "Tun-Tuna",
+      "precio_simple": 12.0,
+      "descripcion": "ideal para refrescarse en cualquier momento.",
+      "linea": 419
+    },
+    {
+      "nombre": "Orenji Soda",
+      "precio_simple": 12.0,
+      "descripcion": "¡Irresistible!",
+      "linea": 423
+    },
+    {
+      "nombre": "Piña Tropical",
+      "precio_simple": 12.0,
+      "descripcion": "y lleno de energía cítrica.",
+      "linea": 426
+    },
+    {
+      "nombre": "Rasengan",
+      "precio_simple": 12.0,
+      "descripcion": "Piña y coco. ¡Un viaje directo a la playa en cada sorbo!",
+      "linea": 428
+    },
+    {
+      "nombre": "Precio Salón:",
+      "precio_simple": 48.0,
+      "descripcion": "20 makis (2 sabores), 5 Dragon Balls y 1 gaseosa de 500 ml.",
+      "linea": 446
+    },
+    {
+      "nombre": "Precio Salón:",
+      "precio_simple": 58.9,
+      "descripcion": "20 makis (2 sabores) y 1 porción de alitas (1 sabor, 6 unidades).",
+      "linea": 449
+    },
+    {
+      "nombre": "Precio Salón:",
+      "precio_simple": 78.9,
+      "descripcion": "40 makis (4 sabores), 5 Dragon Balls y 1/2 bebida.",
+      "linea": 452
+    },
+    {
+      "nombre": "Precio Salón:",
+      "precio_simple": 62.9,
+      "descripcion": "30 makis (3 sabores), 5 Dragon Balls y 1/2 bebida.",
+      "linea": 455
+    },
+    {
+      "nombre": "Precio Salón:",
+      "precio_simple": 151.9,
+      "descripcion": "70 makis (7 sabores), 5 Dragon Balls y 1 litro de bebida.",
+      "linea": 458
+    },
+    {
+      "nombre": "Precio Delivery:",
+      "precio_simple": 44.9,
+      "descripcion": "20 makis (2 sabores), 5 Dragon Balls y 1 gaseosa de 500 ml.",
+      "linea": 475
+    },
+    {
+      "nombre": "Precio Delivery:",
+      "precio_simple": 60.9,
+      "descripcion": "30 makis (3 sabores) y 5 Dragon Balls.",
+      "linea": 478
+    },
+    {
+      "nombre": "Precio Delivery:",
+      "precio_simple": 62.9,
+      "descripcion": "y 1 gaseosa de 500 ml.",
+      "linea": 482
+    },
+    {
+      "nombre": "Precio Delivery:",
+      "precio_simple": 72.9,
+      "descripcion": "40 makis (4 sabores) y 1 gaseosa de 500 ml.",
+      "linea": 485
+    },
+    {
+      "nombre": "Precio Delivery:",
+      "precio_simple": 89.9,
+      "descripcion": "50 makis (5 sabores) y 2 gaseosas de 500 ml.",
+      "linea": 488
+    }
+  ],
+  "productos_dobles": []
+}

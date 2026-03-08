@@ -1,0 +1,344 @@
+{
+  "metadata": {
+    "generado": "2026-03-08",
+    "version": "1.0",
+    "fuente": "Digital Carta Makilovers v01.12 - PDF",
+    "total_productos": 0,
+    "nota": "Este JSON será el origen de verdad para Firestore. Se incluyen descripciones, precios completos y características del producto."
+  },
+  
+  "marca": {
+    "nombre": "Makilovers",
+    "tagline": "Sabores que hacen los momentos inolvidables",
+    "descripcion_marca": "En Makilovers, cada bocado es más que un sabor, es un momento que se comparte y se recuerda. Nos inspira la fusión nikkei, los ingredientes frescos y el arte de crear experiencias inolvidables en cada plato.",
+    "eslogan": "¡Bienvenidos a Makilovers! Cada visita es una oportunidad para celebrar, reencontrarse y disfrutar sin prisas.",
+    "sitio_web": "makilovers.pe",
+    "redes_sociales": {
+      "nota": "Síguenos en redes y mantente al tanto de promociones y sorpresas"
+    },
+    "horarios": "De lunes a domingo de 12:30 a 10:30 p.m.",
+    "ubicaciones": [
+      {
+        "nombre": "Carabayllo S.D.",
+        "direccion": "Av. Condorcanqui Mz(s)lote 26",
+        "whatsapp": "+51 966 876 906"
+      },
+      {
+        "nombre": "Los Olivos",
+        "direccion": "Av. los Próceres de Huandoy 7718",
+        "whatsapp": "+51 979 963 724"
+      },
+      {
+        "nombre": "Comas",
+        "direccion": "Av. Micaela Bastidas 822",
+        "whatsapp": "+51 902 442 383"
+      }
+    ]
+  },
+
+  "categorias": [
+    {
+      "id": "entradas",
+      "nombre": "ENTRADAS",
+      "icono": "🥢",
+      "descripcion": "Iniciadores frescos y variados para comenzar tu experiencia",
+      "subcategorias": [
+        "Sashimi",
+        "Temaki",
+        "Nigiri",
+        "Gunkan",
+        "Alitas",
+        "Furai",
+        "Tempura",
+        "Especiales"
+      ]
+    },
+    {
+      "id": "makis",
+      "nombre": "MAKIS",
+      "icono": "🍣",
+      "descripcion": "Rollos especiales con fusión nikkei",
+      "presentacion_default": "8 piezas"
+    },
+    {
+      "id": "sopas",
+      "nombre": "SOPAS",
+      "icono": "🍜",
+      "descripcion": "Creaciones reconfortantes con caldos intensos",
+      "presentacion_default": "M/L (Mediano/Grande)"
+    },
+    {
+      "id": "bebidas",
+      "nombre": "BEBIDAS",
+      "icono": "🥤",
+      "descripcion": "Bebidas para acompañar"
+    },
+    {
+      "id": "promos",
+      "nombre": "PROMOCIONES",
+      "icono": "🎉",
+      "descripcion": "Ofertas especiales para compartir"
+    }
+  ],
+
+  "productos": {
+    "entradas_sashimi": [
+      {
+        "sku": "ENT-SAS-SAL-01",
+        "nombre": "Salmón",
+        "subcategoria": "Sashimi",
+        "descripcion_corta": "Sashimi de Salmón fresco",
+        "descripcion_larga": "Sashimi de Salmón del Atlántico, frescura en cada corte. 4 piezas de calidad premium.",
+        "caracteres_desc": 75,
+        "presentacion": "4 cortes",
+        "precio": {
+          "venta": 18.00,
+          "costo_estimado": 7.20,
+          "margen_porcentaje": 60,
+          "moneda": "PEN"
+        },
+        "componentes_marca": {
+          "emotional": "Lujo accesible",
+          "cualitativo": "Premium, fresco",
+          "cuantitativo": "4 piezas de 50g cada una"
+        },
+        "alergenos": ["pescado"],
+        "apto_para": ["omnivoros", "sin_gluten"],
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": false,
+          "nombre_recomendado": "ENT-SAS-SAL-01.webp",
+          "alt_text": "4 cortes de sashimi de salmón fresco del Atlántico presentados sobre plato blanco minimalista"
+        }
+      },
+      {
+        "sku": "ENT-SAS-ATU-01",
+        "nombre": "Atún",
+        "subcategoria": "Sashimi",
+        "descripcion_corta": "Sashimi de Atún fresco",
+        "descripcion_larga": "Atún rojo de excelente textura, cada corte una joya del mar. 4 piezas.",
+        "caracteres_desc": 68,
+        "presentacion": "4 cortes",
+        "precio": {
+          "venta": 15.00,
+          "costo_estimado": 6.00,
+          "margen_porcentaje": 60,
+          "moneda": "PEN"
+        },
+        "componentes_marca": {
+          "emotional": "Pureza marina",
+          "cualitativo": "Fresco, tierno",
+          "cuantitativo": "4 cortes de 50g"
+        },
+        "alergenos": ["pescado"],
+        "apto_para": ["omnivoros", "sin_gluten"],
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": false,
+          "nombre_recomendado": "ENT-SAS-ATU-01.webp"
+        }
+      },
+      {
+        "sku": "ENT-SAS-PBL-01",
+        "nombre": "Pescado blanco",
+        "subcategoria": "Sashimi",
+        "descripcion_corta": "Sashimi de Pescado blanco delicado",
+        "descripcion_larga": "Pescado blanco suave con sabor delicado perfecto para iniciados. 4 cortes.",
+        "caracteres_desc": 76,
+        "presentacion": "4 cortes",
+        "precio": {
+          "venta": 20.00,
+          "costo_estimado": 8.00,
+          "margen_porcentaje": 60,
+          "moneda": "PEN"
+        },
+        "componentes_marca": {
+          "emotional": "Delicadeza",
+          "cualitativo": "Suave, fresco",
+          "cuantitativo": "4 cortes de 50g"
+        },
+        "alergenos": ["pescado"],
+        "apto_para": ["omnivoros", "sin_gluten"],
+        "disponibilidad": true
+      }
+    ],
+
+    "entradas_alitas": [
+      {
+        "sku": "ENT-ALI-BBQ-01",
+        "nombre": "Alitas BBQ",
+        "subcategoria": "Alitas",
+        "descripcion_corta": "Alitas crujientes con salsa BBQ",
+        "descripcion_larga": "Alitas de pollo empanizadas a la perfección con salsa BBQ artesanal. 6 unidades.",
+        "caracteres_desc": 76,
+        "presentacion": "6 unidades",
+        "precio": {
+          "venta": 20.00,
+          "costo_estimado": 8.00,
+          "margen_porcentaje": 60,
+          "moneda": "PEN"
+        },
+        "componentes_marca": {
+          "emotional": "Indulgencia crujiente",
+          "cualitativo": "Empanizado, sabroso",
+          "cuantitativo": "6 alitas de 50g c/u"
+        },
+        "alergenos": ["gluten"],
+        "apto_para": ["omnivoros"],
+        "disponibilidad": true
+      },
+      {
+        "sku": "ENT-ALI-TER-01",
+        "nombre": "Alitas Teriyaki",
+        "subcategoria": "Alitas",
+        "descripcion_corta": "Alitas con glaseo teriyaki japonés",
+        "descripcion_larga": "Alitas glazeadas con salsa teriyaki oriental. Dulce, salado y adictivo. 6 piezas.",
+        "caracteres_desc": 77,
+        "presentacion": "6 unidades",
+        "precio": {
+          "venta": 20.00,
+          "costo_estimado": 8.00,
+          "margen_porcentaje": 60,
+          "moneda": "PEN"
+        },
+        "componentes_marca": {
+          "emotional": "Fusión oriental",
+          "cualitativo": "Glazeado, umami",
+          "cuantitativo": "6 alitas de 50g"
+        },
+        "alergenos": ["soya", "gluten"],
+        "apto_para": ["omnivoros"],
+        "disponibilidad": true
+      }
+    ],
+
+    "sopas_ramen": [
+      {
+        "sku": "SOP-RAM-CAS-01",
+        "nombre": "Ramen",
+        "categoria_padre": "Ramen de la Casa",
+        "subcategoria": "Ramen",
+        "descripcion_corta": "Caldo intenso, fideos suave y vegetales frescos",
+        "descripcion_larga": "Un clásico que nunca falla: caldo intenso, fideos ramen que abrazan el alma, vegetales frescos y cerdo suave.",
+        "caracteres_desc": 76,
+        "presentacion": "M/L",
+        "precios_multiples": {
+          "mediano": {
+            "peso": "350g",
+            "venta": 24.00,
+            "costo_estimado": 9.60,
+            "margen_porcentaje": 60
+          },
+          "grande": {
+            "peso": "500g",
+            "venta": 32.00,
+            "costo_estimado": 12.80,
+            "margen_porcentaje": 60
+          }
+        },
+        "moneda": "PEN",
+        "componentes_marca": {
+          "emotional": "Calidez reconfortante",
+          "cualitativo": "Tradicional, casero",
+          "cuantitativo": "350g mediano / 500g grande"
+        },
+        "alergenos": ["gluten", "soya"],
+        "apto_para": ["omnivoros"],
+        "disponibilidad": true,
+        "imagen": {
+          "existe_en_disco": false,
+          "nombre_recomendado": "SOP-RAM-CAS-01_M.webp"
+        }
+      },
+      {
+        "sku": "SOP-RAM-ESP-01",
+        "nombre": "Ramen Especial",
+        "categoria_padre": "Ramen con más",
+        "subcategoria": "Ramen",
+        "descripcion_corta": "Ramen cargado de champiñones, cerdo, langostino y más",
+        "descripcion_larga": "¿Quieres algo más? Este ramen viene cargado de champiñones, cerdo, langostino y más. Puro sabor en cada cucharada.",
+        "caracteres_desc": 78,
+        "presentacion": "M/L",
+        "precios_multiples": {
+          "mediano": {
+            "peso": "380g",
+            "venta": 26.00,
+            "costo_estimado": 10.40,
+            "margen_porcentaje": 60
+          },
+          "grande": {
+            "peso": "550g",
+            "venta": 34.00,
+            "costo_estimado": 13.60,
+            "margen_porcentaje": 60
+          }
+        },
+        "moneda": "PEN",
+        "componentes_marca": {
+          "emotional": "Abundancia gustativa",
+          "cualitativo": "Premium, generoso",
+          "cuantitativo": "380g mediano / 550g grande"
+        },
+        "alergenos": ["gluten", "soya", "pescado", "mariscos"],
+        "apto_para": ["omnivoros"],
+        "disponibilidad": true
+      }
+    ],
+
+    "makis_frios": [
+      {
+        "sku": "MAK-FRI-ACE-01",
+        "nombre": "Acevichado",
+        "subcategoria": "Makis Fríos",
+        "descripcion_corta": "Langostino empanizado con fish ceviche touch",
+        "descripcion_larga": "Langostino empanizado y palta, cubierto de láminas de pescado en salsa acevichada con togarashi. ¡El rey de los makis!",
+        "caracteres_desc": 78,
+        "presentacion": "8 piezas",
+        "precio": {
+          "venta": 28.00,
+          "costo_estimado": 11.20,
+          "margen_porcentaje": 60,
+          "moneda": "PEN"
+        },
+        "componentes_marca": {
+          "emotional": "Fusión peruana",
+          "cualitativo": "Crujiente, fresco, picante",
+          "cuantitativo": "8 piezas, 200g total"
+        },
+        "alergenos": ["pescado", "mariscos", "gluten"],
+        "apto_para": ["omnivoros"],
+        "disponibilidad": true
+      },
+      {
+        "sku": "MAK-FRI-PHI-01",
+        "nombre": "Philadelphia Roll",
+        "subcategoria": "Makis Fríos",
+        "descripcion_corta": "Queso crema y salmón cubiertos con ajonjolí",
+        "descripcion_larga": "Queso crema y salmón, cubiertos con ajonjolí blanco. Suave, cremoso y simplemente delicioso.",
+        "caracteres_desc": 76,
+        "presentacion": "8 piezas",
+        "precio": {
+          "venta": 25.00,
+          "costo_estimado": 10.00,
+          "margen_porcentaje": 60,
+          "moneda": "PEN"
+        },
+        "componentes_marca": {
+          "emotional": "Elegancia cremosa",
+          "cualitativo": "Suave, fresco",
+          "cuantitativo": "8 piezas, 180g total"
+        },
+        "alergenos": ["pescado", "lacteos", "sesamo"],
+        "apto_para": ["omnivoros"],
+        "disponibilidad": true
+      }
+    ]
+  },
+
+  "estadisticas_preliminares": {
+    "total_categorias": 5,
+    "total_subcategorias": 8,
+    "total_productos_en_json": 0,
+    "nota": "Se completará con datos de todas las categorías"
+  }
+}
