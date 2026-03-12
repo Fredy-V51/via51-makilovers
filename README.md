@@ -1,35 +1,37 @@
-# Makilovers 🍣
+# Makilovers
 
-**Makilovers** es un movimiento gastronómico y cultural que celebra la unión, la innovación y la experiencia compartida alrededor del sushi.  
-Nuestro propósito es construir comunidad y estilo de vida moderno a través de los “lovers”, protagonistas de esta historia.
-
-## 🌟 Pilares Narrativos
-
-- **Comunidad**  
-  Los _lovers_ son el corazón de Makilovers. Creamos espacios digitales y físicos donde compartir, participar y disfrutar juntos.
-
-- **Experiencia**  
-  El sushi es más que comida: es un ritual de encuentro, disfrute y conexión. Cada pieza es un momento para celebrar.
-
-- **Innovación**  
-  Apostamos por propuestas creativas en sabores, presentaciones y campañas visuales que diferencian a Makilovers en el mundo gastronómico.
-
-- **Expansión**  
-  Crecemos como movimiento cultural y comercial, con impacto en redes sociales y presencia en espacios físicos.
-
-## 🚀 Estrategia Digital
-
-- Campañas en redes sociales con hashtags y dinámicas participativas.
-- Contenidos visuales (reels, posts, stories) que transmitan la experiencia Makilovers.
-- Programas de fidelización para consolidar la comunidad.
-
-## 📂 Organización del Repositorio
-
-- `docs/` → Documentación narrativa y estratégica.
-- `contenidos/` → Planes de contenidos digitales y material creativo.
-- `visuals/` → Logos, mockups y recursos gráficos.
-- `src/` → Código fuente y servicios técnicos.
+Makilovers es un movimiento gastronómico-cultural dentro del ecosistema **Via51**, autónomo en su identidad pero capaz de dialogar con los ejes político, social y productivo. Su núcleo es la innovación en torno al sushi y la experiencia compartida, pero su alcance trasciende lo culinario para convertirse en narrativa, comunidad y símbolo cultural.
 
 ---
 
-Makilovers: **más que sushi, una comunidad.**
+## 🌌 Pilares temáticos
+1. Innovación gastronómica  
+2. Construcción comunitaria  
+3. Narrativa modular  
+4. Referencia cultural  
+
+---
+
+## 🛠️ Andamiaje técnico
+via51-makilovers/
+├── docs/                  # Documentación técnica y guías
+├── narrativa/             # Textos fundacionales, manifiestos, storytelling
+├── recetas/               # Innovaciones gastronómicas y registros culinarios
+├── comunidad/             # Materiales para talleres y experiencias colectivas
+├── assets/                # Recursos gráficos y multimedia
+└── README.md              # Síntesis del proyecto
+
+---
+
+## 📖 Narrativa fundacional
+Makilovers es más que sushi: es un relato de innovación, comunidad y cultura compartida.  
+Cada receta es un símbolo, cada encuentro una experiencia, cada documento una pieza de memoria.  
+En el cosmos Via51, Makilovers representa la fuerza creativa que une lo cotidiano con lo trascendente.  
+
+---
+
+## ✅ Estado actual
+- Repositorio depurado de material ajeno.  
+- Pendiente fortalecer `narrativa/` con manifiestos y relatos.  
+- Documentación técnica en `docs/` en proceso.  
+- Comunidad y talleres en fase de diseño.
