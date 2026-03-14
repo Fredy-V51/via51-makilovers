@@ -1,1 +1,23 @@
-<meta http-equiv="refresh" content="0; url=./produccion/index.html">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Redireccionando al Nodo...</title>
+    <script>
+        // Obtener el subdominio actual
+        const host = window.location.hostname;
+
+        // Lógica de ruteo
+        if (host.includes('dev.')) {
+            // Si el host contiene 'dev.', envía al laboratorio
+            window.location.href = './desarrollo/index.html';
+        } else {
+            // Por defecto, todo lo demás va a producción
+            window.location.href = './produccion/index.html';
+        }
+    </script>
+</head>
+<body>
+    <p>Conectando con el nodo solicitado...</p>
+</body>
+</html>
