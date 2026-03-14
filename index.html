@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Redireccionando al Nodo...</title>
-    <script>
-        // Obtener el subdominio actual
-        const host = window.location.hostname;
+<script>
+    // Forzar limpieza de ruta
+    const host = window.location.hostname;
+    
+    // Log para depuración (abre F12 > Consola para ver esto)
+    console.log("Detectado host:", host);
 
-        // Lógica de ruteo
-        if (host.includes('dev.')) {
-            // Si el host contiene 'dev.', envía al laboratorio
-            window.location.href = './desarrollo/index.html';
-        } else {
-            // Por defecto, todo lo demás va a producción
-            window.location.href = './produccion/index.html';
-        }
-    </script>
-</head>
-<body>
-    <p>Conectando con el nodo solicitado...</p>
-</body>
-</html>
+    if (host.includes('dev.')) {
+        window.location.replace('./desarrollo/index.html');
+    } else {
+        window.location.replace('./produccion/index.html');
+    }
+</script>
