@@ -113,3 +113,69 @@ h1 {
     background-color: var(--text-main);
     color: var(--bg-color);
 }
+
+#menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+/* Integración visual del menú */
+#menu-makilovers {
+    margin-top: 6rem;
+    padding: 4rem 0;
+    border-top: 1px solid #eee;
+}
+
+#menu-makilovers h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+}
+
+.producto-card {
+    border: 1px solid #eee; /* Más sutil */
+    padding: 20px;
+    background: transparent; /* Mantenemos la pureza del blanco */
+    transition: border-color 0.3s ease;
+}
+
+.producto-card:hover {
+    border-color: var(--accent);
+}
+
+.producto-card h3 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.producto-card p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.producto-card .precio {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.producto-card .penalidad {
+    display: block;
+    font-size: 0.65rem;
+    margin-top: 1rem;
+    color: #999;
+    font-style: italic;
+}
