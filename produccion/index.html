@@ -44,8 +44,11 @@
     </footer>
     <script src="assets/js/menu-engine.js"></script>
     <script>
-        // Esta pequeña línea es el "switch" que le dice al motor: "¡YA, ARRANCA!"
-        window.onload = iniciarMotor(); 
+        // Este es el interruptor que enciende el motor automáticamente
+        document.addEventListener("DOMContentLoaded", () => {
+        console.log("Encendiendo el motor de Makilovers...");
+        obtenerData(); 
+        });
     </script>
 </body>
 </html>
