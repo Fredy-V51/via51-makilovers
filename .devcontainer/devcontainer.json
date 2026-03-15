@@ -1,0 +1,10 @@
+{
+    "name": "Makilovers Cloud Env",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "antigravity.antigravity-agent"
+            ]
+        }
+    }
+}

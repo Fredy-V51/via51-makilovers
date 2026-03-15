@@ -1,0 +1,14 @@
+[
+  {
+    "codigo": "SO-RAM-C",
+    "nombre": "Ramen de la Casa",
+    "precio": { "corto": 25.00, "amplio": 35.00 },
+    "perfil": { "tipo": "umami", "picante": false }
+  },
+  {
+    "codigo": "SO-MISO-C",
+    "nombre": "Ramen Miso",
+    "precio": { "corto": 22.00, "amplio": 30.00 },
+    "perfil": { "tipo": "salado", "picante": false }
+  }
+]

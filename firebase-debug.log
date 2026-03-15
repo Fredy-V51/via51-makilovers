@@ -1,0 +1,63 @@
+[debug] [2026-03-08T13:31:47.209Z] ----------------------------------------------------------------------
+[debug] [2026-03-08T13:31:47.211Z] Command:       /usr/local/share/nvm/versions/node/v24.11.1/bin/node /home/codespace/nvm/current/bin/firebase init emulators
+[debug] [2026-03-08T13:31:47.211Z] CLI Version:   15.8.0
+[debug] [2026-03-08T13:31:47.211Z] Platform:      linux
+[debug] [2026-03-08T13:31:47.212Z] Node Version:  v24.11.1
+[debug] [2026-03-08T13:31:47.212Z] Time:          Sun Mar 08 2026 13:31:47 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-03-08T13:31:47.212Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspaces/makilovers
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-03-08T13:31:48.528Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-08T13:31:48.529Z] > authorizing via signed-in user (fredy.bazalar@via51.org)
+[debug] [2026-03-08T13:31:48.529Z] Checked if tokens are valid: false, expires at: 1772817367985
+[debug] [2026-03-08T13:31:48.530Z] Checked if tokens are valid: false, expires at: 1772817367985
+[debug] [2026-03-08T13:31:48.530Z] > refreshing access token with scopes: []
+[debug] [2026-03-08T13:31:48.531Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-03-08T13:31:48.531Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-03-08T13:31:48.638Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-03-08T13:31:48.639Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2026-03-08T13:31:48.639Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2026-03-08T13:31:48.672Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/auth.js:177:12)
+    at refreshTokens (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/auth.js:590:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async getAccessToken (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/apiv2.js:49:18)
+    at async Client.addAuthHeader (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/apiv2.js:179:21)
+    at async Client.request (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/apiv2.js:126:34)
+    at async getFirebaseProject (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/management/projects.js:361:21)
+    at async usingProject (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/init/features/project.js:77:16)
+    at async Object.doSetup (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/init/features/project.js:29:9)
+    at async init (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/init/index.js:92:13)
+[error] 
+[error] Error: Failed to get Firebase project via51-makilovers. Please make sure the project exists and your account has permission to access it.
