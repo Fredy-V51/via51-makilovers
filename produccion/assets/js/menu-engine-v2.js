@@ -33,4 +33,9 @@ function procesarCSV(csv) {
 }
 
 // ARRANCAMOS AUTOMÁTICO PARA NO TENER QUE ESCRIBIR
+// obtenerData();
+// ... todo tu código anterior ...
+
+// Fuerza la ejecución inmediata al cargar el archivo
+console.log("Fredy: Intentando arrancar el motor ahora mismo...");
 obtenerData();
