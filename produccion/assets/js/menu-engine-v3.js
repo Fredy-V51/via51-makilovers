@@ -1,32 +1,48 @@
-async function obtenerDataSegura() {
-    const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRckVsvBz2UeqtT4bzq7_x5bl4RcG55XLTlKq-79jv3Px3qWSK4UX6yRva4F2tU9-Wd8S60_b6O00Sn/pub?output=csv";
+async function cargarYMostrarMenu() {
+    const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRckVsvBz2UeqtT4bzq7_x5bl4RcG55XLTlKq-79jv3Px3qWSK4UX6yRva4F2tU9-Wd8S60_b6O00Sn/pub?gid=9975600&single=true&output=csv";
 
-    console.log("🌐 [NÚCLEO] Iniciando conexión con Google Sheets...");
+    console.log("🌐 [NÚCLEO] Conectando...");
 
     try {
         const response = await fetch(url);
+        const csvText = await response.text();
+        
+        // Separar en filas y limpiar vacías
+        const lineas = csvText.split('\n').filter(l => l.trim() !== "");
+        const encabezados = lineas[0].split(',').map(h => h.trim());
+        
+        const productos = lineas.slice(1).map(linea => {
+            const valores = linea.split(',');
+            let obj = {};
+            encabezados.forEach((h, i) => {
+                obj[h] = valores[i] ? valores[i].trim() : "";
+            });
+            return obj;
+        });
 
-        if (!response.ok) {
-            throw new Error(`Error HTTP: ${response.status} - ${response.statusText}`);
-        }
-
-        const textData = await response.text();
-
-        // VALIDACIÓN ESTRICTA: ¿Google nos engañó con una página web?
-        const snippet = textData.trim().substring(0, 20).toLowerCase();
-        if (snippet.startsWith("<!doctype html>") || snippet.startsWith("<html")) {
-            console.error("🚨 [BLOQUEO GOOGLE] El servidor devolvió una página web, no un archivo CSV. Causas comunes: El documento requiere inicio de sesión, el enlace de publicación expiró, o Google muestra una pantalla de 'Aviso de redirección'.");
-            return;
-        }
-
-        console.log("✅ [ÉXITO] Datos CSV puros interceptados correctamente:");
-        console.log(textData.substring(0, 150) + "... [Continúa]");
-
-        // Siguiente paso: procesarCSV(textData);
+        console.log("✅ Data lista:", productos);
+        renderizarEnHTML(productos);
 
     } catch (error) {
-        console.error("❌ [FALLO DE RED/CORS] La conexión fue abortada por el navegador:", error.message);
+        console.error("❌ Fallo:", error);
     }
 }
 
-obtenerDataSegura();
+function renderizarEnHTML(productos) {
+    const contenedor = document.getElementById('menu-container');
+    if (!contenedor) {
+        console.error("⚠️ No se encontró el div id='menu-container'");
+        return;
+    }
+
+    contenedor.innerHTML = productos.map(p => `
+        <div style="border: 1px solid #ccc; margin: 10px; padding: 10px;">
+            <h3>${p.Productos || 'Sin nombre'}</h3>
+            <p>${p.Descripción || ''}</p>
+            <strong>${p.Precios || 'Consultar precio'}</strong>
+        </div>
+    `).join('');
+}
+
+// Para uso externo
+window.obtenerData = cargarYMostrarMenu;
