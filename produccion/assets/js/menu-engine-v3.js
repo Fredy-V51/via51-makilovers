@@ -1,33 +1,32 @@
-(async function depurarConexion() {
-    const urlFija = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRckVsvBz2UeqtT4bzq7_x5bl4RcG55XLTlKq-79jv3Px3qWSK4UX6yRva4F2tU9-Wd8S60_b6O00Sn/pub?output=csv";
-    
-    console.log("🛠️ [PRO TEST] 1. Arrancando script de depuración...");
+async function obtenerDataSegura() {
+    const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRckVsvBz2UeqtT4bzq7_x5bl4RcG55XLTlKq-79jv3Px3qWSK4UX6yRva4F2tU9-Wd8S60_b6O00Sn/pub?output=csv";
+
+    console.log("🌐 [NÚCLEO] Iniciando conexión con Google Sheets...");
 
     try {
-        console.log("🛠️ [PRO TEST] 2. Ejecutando fetch a Google Sheets...");
-        const response = await fetch(urlFija);
-        
-        console.log("🛠️ [PRO TEST] 3. Respuesta recibida. Estado HTTP:", response.status);
+        const response = await fetch(url);
 
         if (!response.ok) {
-            console.error("❌ [PRO TEST] ERROR: Google respondió con un error HTTP", response.status);
+            throw new Error(`Error HTTP: ${response.status} - ${response.statusText}`);
+        }
+
+        const textData = await response.text();
+
+        // VALIDACIÓN ESTRICTA: ¿Google nos engañó con una página web?
+        const snippet = textData.trim().substring(0, 20).toLowerCase();
+        if (snippet.startsWith("<!doctype html>") || snippet.startsWith("<html")) {
+            console.error("🚨 [BLOQUEO GOOGLE] El servidor devolvió una página web, no un archivo CSV. Causas comunes: El documento requiere inicio de sesión, el enlace de publicación expiró, o Google muestra una pantalla de 'Aviso de redirección'.");
             return;
         }
 
-        const data = await response.text();
-        
-        // Verificamos si Google nos engañó enviando una página HTML (página de login) en lugar del CSV
-        if (data.trim().startsWith("<!DOCTYPE html>") || data.trim().startsWith("<html")) {
-            console.error("❌ [PRO TEST] ERROR DE REDIRECCIÓN: Google está bloqueando el acceso y enviando una página web (posiblemente de inicio de sesión) en lugar del CSV. Revisa si el documento sigue siendo público.");
-            return;
-        }
+        console.log("✅ [ÉXITO] Datos CSV puros interceptados correctamente:");
+        console.log(textData.substring(0, 150) + "... [Continúa]");
 
-        console.log("✅ [PRO TEST] ¡ÉXITO! Data cruda recibida correctamente:");
-        console.log(data);
+        // Siguiente paso: procesarCSV(textData);
 
     } catch (error) {
-        console.error("❌ [PRO TEST] FALLO CRÍTICO DE RED O CORS:");
-        console.error(error.message);
-        console.log("⚠️ DIAGNÓSTICO: Si el mensaje de arriba dice 'Failed to fetch' o 'NetworkError', el navegador está bloqueando la conexión. Lee la sección de abajo.");
+        console.error("❌ [FALLO DE RED/CORS] La conexión fue abortada por el navegador:", error.message);
     }
-})();
+}
+
+obtenerDataSegura();
